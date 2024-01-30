@@ -121,6 +121,7 @@ def test_trim3():
     u = f16.Control(thtl=0.1325, elv_cmd_deg=-0.0559)
     x = f16.trim_actuators(x, u)
     dx = f16.dynamics(x, u, p)
+    print(dx)
     assert f16.trim_cost(dx) < TRIM_TOL
 
 
