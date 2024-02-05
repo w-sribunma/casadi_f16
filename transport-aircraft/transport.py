@@ -188,10 +188,10 @@ def constrain(s, vt, h, q, gamma,land, gam_r):
     theta = alpha + gamma
     d=0 #deviation from glide path
 
-    # vt, alpha, theta, q, h, pos
+    # vt, alpha, theta, q, h, d
     x = ca.vertcat(vt, alpha, theta, q, h, d)
     
-    # thtl, elev_deg, xcg, land
+    # thtl, elev_deg, xcg, land, gam_r
     u = ca.vertcat(thtl, elev_deg, xcg, land, gam_r)
     return x, u
 
